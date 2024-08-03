@@ -1,3 +1,13 @@
+Passos para instalacao simplicada: 
+```
+git clone "https://github.com/b-irigui/ac1300t4u-Driver-TpLink.git" /usr/src/rtl88x2bu-git
+sed -i 's/PACKAGE_VERSION="@PKGVER@"/PACKAGE_VERSION="git"/g' /usr/src/rtl88x2bu-git/dkms.conf
+dkms add -m rtl88x2bu -v git
+dkms autoinstall
+```
+
+
+
 # REALTEK RTL88x2B USB Linux Driver
 **Current Driver Version**: 5.13.1-30
 **Support Kernel**: 2.6.24 ~ 6.10 (with unofficial patches)
